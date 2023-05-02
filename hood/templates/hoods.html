@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+{% block content %}
+{{block.super}}
+<style>
+    body{
+    font-family: 'Lato', global_font_string;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    
+    }
+
+    .image{
+        height: auto;
+        width: 100%;
+    }
+    .hood{
+        margin-top: 5%;
+        margin-bottom: 5%;
+        
+    }
+<!-- </style>
+    <div class="container hood">
+        <div class="text-center mb-3">
+            {% comment %} <a href="{%url 'create_hood'  %}"  class="btn btn-outline-dark bg-dark text-white rounded-pill"> {% endcomment %}
+             {% comment %} Add New Animal {% endcomment %}
+            {% comment %} </a> {% endcomment %}
+        </div>
+        <div class="row">
+            {% for hoods in hood %}
+            <div class="col-md-6">
+                
+                <a href="{% url 'single_hood' hoods.name %}" class="btn btn-info btn-sm"><img src="{{hoods.photo.url}}" alt="" class="image"></a>
+                
+                <h3 class="name">{{hoods.name}} , {{ hoods.location }}</h3>
+                <p>{{hoods.animals.count}} Animal{{hoods.animals.count|pluralize}}</p>
+                
+                <p>{{ hoods.content }}</p>
+                
+                {% if request.user.profile.animalsranch == hoods %}
+            <a href="{% url 'leave_hood' hoods.id %}" class="btn btn-outline-danger btn-sm">Leave at will</a>
+            
+            <a href="{%url 'single_hood' hoods.name %}" class="btn btn-outline-success btn-sm" style="float: right">Explore {{hoods.name}}
+          </a>
+            {% elif not request.user.profile.animalsranch %}
+            <a href="{% url 'single_hood' hoods.name %}" class="btn btn-info btn-sm">See Animal</a>
+            {% endif %}
+            </div>
+            
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %} -->

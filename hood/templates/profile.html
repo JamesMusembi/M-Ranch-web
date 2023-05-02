@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Lato', global_font_string;
+        font-weight: 500;
+        background-color: black;
+        color: whitesmoke;
+        
+    }
+    .container {
+        border-radius: 8px;
+        background-color: green;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        /* border-top: 8px; */
+    }
+    input[type=submit] {
+        background-color: black;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }    
+
+  
+</style>
+ 
+ <!--Contact(start)-->
+
+	<div class="container">
+        <form action="https://formspree.io/f/mvongzdz" method="POST">
+                <label for="fname">Full Name</label></br>
+                <input type="text" id="fname" name="fullname" placeholder="Your full name.." required></br>
+
+                <label for="email">Email Address</label></br>
+                <input type="text" id="email" name="emailaddress" placeholder="Email Address.." required></br>
+                
+                <br>
+
+                <label for="subject">Message</label></br>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea></br>
+
+                <input type="submit" value="Send">
+        </form>
+</div>
+	
+<!-- <td width="80%" valign="top">
+    <font face="Verdana"
+        color="#4CAF50" size="5">
+        ©Copyright 2023 by Mlor Abera Ranch.
+        All rights reserved.
+    </font>
+</td> -->
+<!--Contact(end)-->
+{% endblock %}
